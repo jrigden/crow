@@ -1,0 +1,33 @@
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id":"{{ .Site.BaseURL }}"
+      },
+      "headline": "Jason Rigden",
+      "description": "{{ $.Site.Params.description }}",
+
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://files.jasonrigden.com/img/me/jasonrigden-wide.jpg",
+        "height": 441,
+        "width": 1000
+      },
+      "datePublished": "{{ now.Format "2006-01-02T15:04:05JST" }}",
+      "dateModified": "{{ now.Format "2006-01-02T15:04:05JST" }}",
+      "author": {
+        "@type": "Person",
+        "name": "Jason Rigden"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Jason Rigden",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://jasonrigden.com/logo.png"
+        }
+      }
+    }
+  </script>

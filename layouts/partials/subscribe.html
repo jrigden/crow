@@ -1,0 +1,49 @@
+{{ if eq .Params.podcast "talktoseattle" }}
+    <div class="subscribe">
+        <h3>Subscribe to the podcast</h3>
+        <div class="wrapper">
+
+            <div class="left">
+                <a href="https://itunes.apple.com/us/podcast/talk-to-the-left/id1438908915?mt=2">
+                    <img src="https://files.jasonrigden.com/img/buttons/apple_podcast.svg">
+                </a>
+            </div>
+            <div class="right">
+                <a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly90YWxrdG90aGVsZWZ0LmxpYnN5bi5jb20vcnNz">
+                    <img src="https://files.jasonrigden.com/img/buttons/google_podcast.svg">
+                </a>
+
+            </div>
+        </div>
+
+        <p>
+            You can also subscribe on <a href="https://open.spotify.com/show/1E2X7V425guEEMCfLIIcTn">Spotify</a>, <a href="https://www.youtube.com/channel/UCUOYi02T1jW9rqf6tSJwLsw">YouTube</a>, or <a href="https://talktotheleft.libsyn.com/rss">RSS</a>. Or just search for <strong>"Talk To Seattle"</strong> on your favorite
+            podcast app.
+        </p>
+    </div>
+
+
+{{ else if eq .Params.podcast "talkingcryptocurrency" }}
+    <div class="subscribe">
+        <h3>Subscribe to the podcast</h3>
+        <div class="wrapper">
+
+            <div class="left">
+                <a href="https://itunes.apple.com/us/podcast/talking-cryptocurrency/id1388099603?mt=2&app=podcast">
+                    <img src="https://files.jasonrigden.com/img/buttons/apple_podcast.svg">
+                </a>
+            </div>
+            <div class="right">
+                <a href="https://www.google.com/podcasts?feed=aHR0cDovL3RhbGtpbmdjcnlwdG9jdXJyZW5jeS5saWJzeW4uY29tL3Jzcw%3D%3D">
+                    <img src="https://files.jasonrigden.com/img/buttons/google_podcast.svg">
+                </a>
+
+            </div>
+        </div>
+
+        <p>
+            You can also subscribe on <a href="https://open.spotify.com/show/3TVoWqzcalYQeKNiuzrB8G">Spotify</a>, <a href="https://www.youtube.com/channel/UCDWVKh9yZk25Y_CTut4nsOA">YouTube</a>, or <a href="http://talkingcryptocurrency.libsyn.com/rss">RSS</a>. Or just search for <strong>"Talking Cryptocurrency"</strong> on your favorite
+            podcast app.
+        </p>
+    </div>
+{{ end }}

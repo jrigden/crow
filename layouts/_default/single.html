@@ -1,0 +1,59 @@
+{{ partial "header.html" . }}
+<div class="post">
+	<div class="post-media">
+		{{ if .Params.featuredImage }}
+			<img src="{{.Params.featuredImage}}">
+		{{ end }}
+		{{ if .Params.youtubeID }}
+
+			<div class='embed-container'>
+				<iframe 
+					src='https://www.youtube.com/embed/{{ .Params.youtubeID }}'
+					frameborder='0' 
+					allowfullscreen>
+				</iframe>
+			</div>
+		{{ end }}
+
+
+		{{ if .Params.libsynID }}
+		<p>
+				<iframe 
+					style="border: none" 
+					src="//html5-player.libsyn.com/embed/episode/id/{{ .Params.libsynID }}/height/90/theme/custom/autoplay/no/autonext/no/thumbnail/yes/preload/no/no_addthis/no/direction/backward/render-playlist/no/custom-color/000000/" 
+					height="90" 
+					width="100%" 
+					scrolling="no"  
+					allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+		</p>
+		{{ end }}
+
+	</div>
+	<div class="post-header">
+		<h1>{{ .Title }}</h1>
+	</div>
+	<div class="post-body">
+		{{ .Content }}
+	</div>
+	<div class="post-footer">
+		{{ if .Params.podcast }}
+			{{ partial "subscribe.html" . }}
+		{{ end }}
+		<div class="post-meta">
+			<h5>
+				Posted {{ .Date.Format "January 2, 2006" }}
+				<br>
+				{{ if .Params.tags }}
+				Tags:
+				{{ $len := len .Params.tags }}
+				{{ range $index, $tag := .Params.tags }}
+				<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a>
+				{{- if lt $index (sub $len 1) -}}, {{ end }}
+				{{ end }}
+				{{ end }}
+			</h5>
+		</div>
+		{{ partial "related.html" . }}
+	</div>
+</div>
+{{ partial "footer.html" . }}

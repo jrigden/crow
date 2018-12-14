@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>{{.Title}}</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	{{ if .IsPage}}
+		{{ partial "single_meta.html" . }}
+		{{ partial "single_json_ld.html" . }}
+	{{ else if .IsHome }}
+		{{ partial "home_meta.html" . }}
+		{{ partial "home_json_ld.html" . }}
+	{{ end }}
+
+
+	{{ partial "styles.html" . }}
+</head>
+<nav class="wrapper">
+	<div class="left">
+		<a href="/">Jason Rigden</a>
+	</div>
+
+	<div class="right">
+	<a href="/posts">
+			Blog
+	</a>
+
+
+	</div>
+</nav>
+<div class="main">
