@@ -1,0 +1,33 @@
+{{ partial "header.html" . }}
+<div class="list-of-posts">
+	{{ if eq .Type "tags" }}
+	<h1>Posts Tagged with {{ .Title | singularize }}</h1>
+
+	{{ else }}
+	{{ end }}
+	{{ range (.Paginate .Pages).Pages }}
+	{{ .Render "summary" }}
+	{{ end }}
+</div>
+
+
+<div class="list-pagination dark-links">
+		<div class="left">
+				{{ if .Paginator.HasPrev }}
+				<a href="{{ .Paginator.Prev.URL }}">Newer</a>
+				{{ end }}
+				
+
+		</div>
+		<div class="right">
+				
+				{{ if .Paginator.HasNext }}
+				<a href="{{ .Paginator.Next.URL }}">Older</a>
+				{{ end }}
+		</div>
+</div>
+
+
+
+
+{{ partial "footer.html" . }}
