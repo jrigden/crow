@@ -38,6 +38,9 @@
 	<div class="post-footer">
 		{{ if .Params.podcast }}
 			{{ partial "subscribe.html" . }}
+		{{ else }}
+			{{ partial "cta.html" . }}
+		</h3>
 		{{ end }}
 		<div class="post-meta">
 			<h5>
@@ -55,5 +58,9 @@
 		</div>
 		{{ partial "related.html" . }}
 	</div>
+
+         
+
 </div>
 {{ partial "footer.html" . }}
+

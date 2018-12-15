@@ -1,0 +1,30 @@
+{{ .Scratch.Add "cta" (index (slice "email" "twitter" "youtube" "share" | shuffle) 1) }}
+
+{{ if eq (.Scratch.Get "cta") "email" }}
+<h3 style="text-align:center;">If you liked this post,<br>sign up for my <a href="https://tinyletter.com/rigden">newsletter</a>
+
+{{ else if eq (.Scratch.Get "cta") "twitter" }}
+<h3 style="text-align:center;">If you liked this post,<br>follow me on <a href="https://twitter.com/mr_rigden">twitter</a>
+
+{{ else if eq (.Scratch.Get "cta") "youtube" }}
+<h3 style="text-align:center;">If you liked this post,<br>subscribe to my <a href="https://www.youtube.com/channel/UCaznk2AsVEhlAl0u2fOLNsw">YouTube Channel</a>
+
+{{ else if eq (.Scratch.Get "cta") "share" }}
+<h3 style="text-align:center;">If you liked this post,<br>share it on <a id="twitter-share-link" href="">Twitter</a>
+
+<script>
+    var baseURL = "https://twitter.com/intent/tweet?";
+    var textPart = "text=" + encodeURI({{ .Title }}) + " by @mr_rigden" + "%0D" ;
+    var urlPart = "&amp;url=" + encodeURI({{ .Permalink }});
+    var fullURL = baseURL + textPart + urlPart;
+    var link = document.getElementById("twitter-share-link");
+    link.setAttribute('href', fullURL);
+</script>
+
+
+{{ end }}
+
+
+
+
+
