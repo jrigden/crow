@@ -13,12 +13,12 @@
         "@type": "ImageObject",
         {{if .Params.featuredImage }}
             "url": "{{ .Params.featuredImage }}",
-            "height": 675,
-            "width": 1200
+            "height": 2000,
+            "width": 2000
         {{ else }}
-          "url": "https://files.jasonrigden.com/img/me/jasonrigden-wide.jpg",
-          "height": 441,
-          "width": 1000
+          "url": "{{ $.Site.Params.default_jsonld_image }}",
+          "height": 2000,
+          "width": 2000
         {{ end }}
       },
       "datePublished": "{{ .Date.Format "2006-01-02T15:04:05JST" }}",

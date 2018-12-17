@@ -1,3 +1,11 @@
+{{ if eq .Site.Params.siteCode "jasonrigden" }}
+
+{{ else if eq .Site.Params.siteCode "podcastingquestions" }}
+{{ partial "podcastingquestions/subscribe.html" . }}
+
+{{end}}
+
+
 {{ if eq .Params.podcast "talktoseattle" }}
     <div class="subscribe">
         <h3>Subscribe to the podcast</h3>

@@ -1,5 +1,6 @@
 
 body {
+  margin: 0px;
   font-size: 18px;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
@@ -30,6 +31,7 @@ text-align: justify;
 .left {
     flex: 0 0 50%;
 }
+
 .right {
     flex: 1;
 }
@@ -84,7 +86,7 @@ nav .left {
     width: 100%;
     height: auto;
 }
-.about {
+.about p{
     text-align: justify;
 }
 
@@ -253,7 +255,65 @@ code {
   max-width: 10rem;
 }
 
+
+/* Forms */
+.crow-form {
+  
+  padding-top: 1rem; 
+  padding-bottom: 1rem; 
+  text-align: center;
+
+}
+
+form {
+  display: inline-block;
+}
+
+
+input, textarea {
+  font-size: 1.5rem;
+  width: 20rem;
+  border-style: solid;
+  border-width: 5px;
+  margin-bottom: 1rem;
+  display: block;
+  font-family: 'Lato', sans-serif;
+}
+
+textarea {
+  width: 20rem;
+  border-color: black;
+  display: block;
+}
+
+.form-submit-button {
+  padding: .5rem;
+  color: white;
+  background-color: black;
+  width: 10rem;
+  border: none;
+  margin: 0 auto;
+
+}
+
 /* Odds and Ends */
 .twitter-tweet  {
   margin: 0 auto;
 }
+
+.center-text {
+  text-align: center;
+}
+
+
+.about .subscribe-header {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 0rem;
+}
+.cover-art {
+  max-width: 30rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+} 

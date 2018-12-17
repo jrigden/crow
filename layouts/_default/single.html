@@ -36,12 +36,7 @@
 		{{ .Content }}
 	</div>
 	<div class="post-footer">
-		{{ if .Params.podcast }}
-			{{ partial "subscribe.html" . }}
-		{{ else }}
-			{{ partial "cta.html" . }}
-		</h3>
-		{{ end }}
+		
 		<div class="post-meta">
 			<h5>
 				Posted {{ .Date.Format "January 2, 2006" }}
@@ -56,6 +51,7 @@
 				{{ end }}
 			</h5>
 		</div>
+		{{ partial "cta.html" . }}
 		{{ partial "related.html" . }}
 	</div>
 

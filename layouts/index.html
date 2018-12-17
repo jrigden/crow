@@ -1,48 +1,7 @@
-{{ partial "header.html" . }}
-<div class="about">
-	<img src="https://files.jasonrigden.com/img/me/jasonrigden_twittercard.jpg">
-	<h1>Jason Rigden</h1>
-	<p>
-		You may remember me from such projects as <a href="https://seattlepodcasters.com/">The Seattle
-			Podcasters Guild</a>, <a href="http://talkingcryptocurrency.net/">The Talking
-			Cryptocurrency Podcast</a>, or some of <a href="https://medium.com/@jasonrigden/how-to-make-an-alexa-skill-with-python-cb8a6a6c4d85">my</a>
-		<a href="https://medium.com/@jasonrigden/a-guide-to-python-itertools-82e5a306cdf8">popular</a></a> <a href="https://medium.com/@jasonrigden/using-tor-with-the-python-request-library-79015b2606cb">Python</a>
-		<a href="https://youtu.be/bxhXQG1qJPM">tutorials</a>.
-		I spend most my time doing programming, podcasting, and digital marketing stuff</a>.
-	</p>
+{{ if eq .Site.Params.siteCode "jasonrigden" }}
+{{ partial "jasonrigden/index.html" . }}
 
-	<h2>My Podcasts</h2>
-	<ul class="podcast-list">
-		<li><a href="https://talktoseattle.com/">Talk To Seattle</a></li>
-		<li><a href="https://podcastingquestions.com/">Podcasting Questions</a></li>
-		<li><a href="https://seattlepodcasters.com/episode/">Seattle Podcasters Podcast</a></li>
-		<li><a href="http://talkingcryptocurrency.net/">Talking Cryptocurrency </a> - On Indefinite hiatus</li>
-	</ul>
+{{ else if eq .Site.Params.siteCode "podcastingquestions" }}
+{{ partial "podcastingquestions/index.html" . }}
 
-
-	<h2>Other Links</h2>
-	<p class="about-links">
-
-		<a href="https://twitter.com/mr_rigden">
-			<i class="fab fa-twitter"></i>
-		</a>
-		<a href="https://www.instagram.com/jasonrigden/">
-			<i class="fab fa-instagram"></i>
-		</a>
-		<a href="https://www.linkedin.com/in/jasonrigden/">
-			<i class="fab fa-linkedin"></i>
-		</a>
-		<a href="https://github.com/jrigden/">
-			<i class="fab fa-github"></i>
-		</a>
-		<a href="https://www.youtube.com/channel/UCaznk2AsVEhlAl0u2fOLNsw">
-			<i class="fab fa-youtube"></i>
-		</a>
-		<a href="mailto:jasonrigden@jasonrigden.com">
-			<i class="fas fa-envelope"></i>
-		</a>
-	</p>
-
-	
-</div>
-{{ partial "footer.html" . }}
+{{end}}
