@@ -91,12 +91,22 @@ nav .left {
 }
 
 
+
+
 /* about-links  */
 .about-links a {
     font-size: 2rem;
     padding-right: 1rem;
   }
-  
+
+.podcast-about-links p {
+  text-align: center;
+}
+.podcast-about-links a {
+  font-size: 2rem;
+  padding-right: 1rem;
+}
+
 
 
 /* post-media   */
