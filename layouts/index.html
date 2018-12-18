@@ -7,5 +7,10 @@
 {{ else if eq .Site.Params.siteCode "talkingcryptocurrency" }}
 {{ partial "talkingcryptocurrency/index.html" . }}
 
+{{ else if eq .Site.Params.siteCode "talktoseattle" }}
+{{ partial "talktoseattle/index.html" . }}
+
+{{ else }}
+siteCode Not Found
 
 {{end}}
