@@ -19,3 +19,17 @@
 <meta name="twitter:title" content="Jason Rigden">
 <meta name="twitter:description" content="{{ $.Site.Params.description }}">
 <meta name="twitter:image" content="{{ $.Site.Params.default_twitter_image }}">
+
+{{  if eq .Site.Params.siteCode "podcastingquestions" }}
+<link type="application/rss+xml" rel="alternate" title="The Podcasting Questions Podcast" href="https://podcastingquestions.libsyn.com/rss"/>
+
+{{ else if eq .Site.Params.siteCode "talkingcryptocurrency" }}
+<link type="application/rss+xml" rel="alternate" title="Talking Cryptocurrency" href="https://talkingcryptocurrency.libsyn.com/rss"/>
+
+{{ else if eq .Site.Params.siteCode "talktoseattle" }}
+<link type="application/rss+xml" rel="alternate" title="Talk To Seattle" href="https://talktotheleft.libsyn.com/rss"/>
+
+
+
+
+{{ end }}
