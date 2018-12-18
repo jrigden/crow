@@ -4,4 +4,8 @@
 {{ else if eq .Site.Params.siteCode "podcastingquestions" }}
 {{ partial "podcastingquestions/index.html" . }}
 
+{{ else if eq .Site.Params.siteCode "talkingcryptocurrency" }}
+{{ partial "talkingcryptocurrency/index.html" . }}
+
+
 {{end}}
