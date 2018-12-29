@@ -6,7 +6,6 @@
 			A daily podcast about podcasting that answers your questions in under 5 minutes per episode. No long intro, no music, and no paid ads. Just a bunch of answers to your podcasting questions.
 	</p>
 
-
 	{{ partial "podcastingquestions/subscribe.html" . }}
 	<div class="podcast-about-links">
 		<p>
@@ -23,6 +22,24 @@
 			</a>
 		</p>
 	</div>
+	
+<p>If you have a podcasting question, please send it to me. I'm always looking for new podcasting questions for the show. 
+
+If I choose your question, I'll give you and your show a shout out on the episode and link to your podcast in the show notes.
+
+Use the form below or just email ask@podcastingquestions.com</p>
+
+<div class="crow-form">
+<h2>Ask YOur Question</h2>
+<form action="https://formspree.io/ask@podcastingquestions.com" method="POST">
+  <input type="text" name="name" placeholder="Name">
+  <input type="text" name="podcast" placeholder="Podcast">
+  <input type="email" name="_replyto" placeholder=Email">
+  <textarea name="message" placeholder="Question"></textarea>
+
+  <input class="form-submit-button" type="submit" value="Send">
+</form>
+</div>
 
 
 {{ partial "footer.html" . }}
