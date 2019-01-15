@@ -10,6 +10,9 @@
 {{ else if eq .Site.Params.siteCode "talktoseattle" }}
 {{ partial "talktoseattle/index.html" . }}
 
+{{ else if eq .Site.Params.siteCode "seattlepodcasters" }}
+{{ partial "seattlepodcasters/index.html" . }}
+
 {{ else }}
 siteCode Not Found
 
