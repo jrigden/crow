@@ -340,3 +340,18 @@ textarea {
   text-decoration: none;
   color: red;
 } 
+
+  .about-text h1{
+    text-align: center;
+    margin-top: .5rem;
+    margin-bottom: 0rem;
+  }
+  .about-text p{
+    text-align: center;
+    margin-top: 0rem;
+    
+  }
+  .about img {
+    padding-top: 0rem;
+
+}
